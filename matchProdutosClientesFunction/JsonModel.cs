@@ -17,8 +17,8 @@ namespace matchProdutosClientesFunction
 
     public class JsonReturn
     {
-        //public string prob1 { get; set; }
+        public string tag { get; set; }
         //public string prob2 { get; set; }
-        public List<string> Tags { get; set; }
+        //public List<string> Tags { get; set; }
     }
 }

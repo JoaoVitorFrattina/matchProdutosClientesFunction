@@ -16,7 +16,7 @@ namespace matchProdutosClientesFunction
     {
         [FunctionName("GetProbabilidades")]
         public static async Task<JsonReturn> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequest req,
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
@@ -28,7 +28,7 @@ namespace matchProdutosClientesFunction
 
             probs = probs.OrderByDescending(p => p.probability).ToList();
 
-            return new JsonReturn() { Tags = new List<string>() { probs[0].tagName, probs[1].tagName } };
+            return new JsonReturn() { tag = probs[0].tagName };
         }
     }
 }

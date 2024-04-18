@@ -16,7 +16,7 @@ namespace matchProdutosClientesFunction
     {
         [FunctionName("GetProbabilidades")]
         public static async Task<JsonReturn> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequest req,
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
